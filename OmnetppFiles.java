@@ -8,7 +8,7 @@ public class OmnetppFiles {
 
 	private String strIni = new String();
 	private String strNed = new String();
-	private Environment env;  
+	private Environment env;
 	private ChannelAssignerInterface assigner;
 	private Util util;
     private String suffix;
@@ -16,7 +16,7 @@ public class OmnetppFiles {
     private float customInterference;
     private float sameInterference;
     private float randomInterference;
-  
+
 
 	public OmnetppFiles(Environment env, Util util, ChannelAssignerInterface assigner, String path, String suffix) {
 		this.env = env;
@@ -24,19 +24,19 @@ public class OmnetppFiles {
 		this.assigner = assigner;
         this.path = path;
         this.suffix = suffix;
-		
+
 		System.out.println("Amount of APs: " + this.env.getAmountOfAPs());
 		System.out.println("Amount Wi-Fi AP: " + this.env.getWifiAPs().size());
 		System.out.println("Amount Zigbee AP: " + this.env.getZigbeeAPs().size());
 		System.out.println("Amount Bluetooth AP: " + this.env.getBluetoothAPs().size());
-		
+
 		System.out.println("Amount of Devices: " + this.env.getAmountOfDevices());
 		System.out.println("Amount Wi-Fi Dev: " + this.env.getWifiDevs().size());
 		System.out.println("Amount Zigbee Dev: " + this.env.getZigbeeDevs().size());
         System.out.println("Amount Bluetooth Dev: " + this.env.getBluetoothDevs().size());
 	}
 
-  public void writeInterferencesFile(String config){ 
+  public void writeInterferencesFile(String config){
     String configFileName = path + config + suffix;
     try(FileWriter writer = new FileWriter(configFileName, true)){
       if(config.equals("CUSTOM")){
@@ -56,7 +56,7 @@ public class OmnetppFiles {
       e.printStackTrace();
     }
   }
-  
+
   public void writeTimeElapsedFile(){
     String runtimeFile = path + "RUNTIME" + suffix;
     try(FileWriter writer  = new FileWriter(runtimeFile, true)){
@@ -69,13 +69,13 @@ public class OmnetppFiles {
 
   public void printINIFile(String output) {
     prepareOmnetppHeader();
-    prepareOmnetppSAME(); 
+    prepareOmnetppSAME();
     prepareOmnetppRANDOM();
     prepateOmnetppCustom();
 
     try {
       // File iniFile = new File(output);
-      
+
       FileWriter writer = new FileWriter(output);
       writer.write(this.strIni);
       writer.close();
@@ -83,8 +83,8 @@ public class OmnetppFiles {
     } catch (IOException iox) {
       iox.printStackTrace();
     }
-  }	
-	
+  }
+
 	public void printINIFile() {
 		prepareOmnetppHeader();
 		prepareOmnetppSAME();
@@ -97,7 +97,7 @@ public class OmnetppFiles {
 			FileWriter writer = new FileWriter(iniFile);
 			writer.write(this.strIni);
 			writer.close();
-			
+
 			System.out.println("Printed ini file");
 
 		} catch (IOException iox) {
@@ -107,7 +107,7 @@ public class OmnetppFiles {
 
 	public void printNEDFile(String output) {
 	   prepareOmnetppNED();
-	   
+
 	   try {
 	    //  File iniFile = new File(output);
 
@@ -119,17 +119,17 @@ public class OmnetppFiles {
 	     iox.printStackTrace();
 	   }
 	}
-	
+
 	public void printNEDFile() {
 		prepareOmnetppNED();
-		
+
 		try {
 			File iniFile = new File("network.ned");
 
 			FileWriter writer = new FileWriter(iniFile);
 			writer.write(this.strNed);
 			writer.close();
-			
+
 			System.out.println("Printed ned file");
 
 		} catch (IOException iox) {
@@ -176,12 +176,12 @@ public class OmnetppFiles {
 		str += "# Configuring AP and devices positions\n";
 		str += "#--------------------------------------------------------------------------------\n";
 		str += "\n";
-		
+
 		int countWifi = 0;
 		int countZigbee = 0;
 		int countBluetooth = 0;
-		
-		if (this.env.getAmountOfAPs() > 0) {			
+
+		if (this.env.getAmountOfAPs() > 0) {
 			str += "# AP\n";
 			str += "\n";
 			str += "*.hostAP_*.mobility.typename = \"LinearMobility\"\n";
@@ -189,7 +189,7 @@ public class OmnetppFiles {
 			str += "*.hostAP_*.mobility.speed = 0mps\n";
 			str += "*.hostAP_*.mobility.initialZ = 1.7m\n";
 			str += "\n";
-			
+
 			for (AP ap : this.env.getWifiAPs()) {
 				str += "\n";
 				str += "# AP_Wifi[" + countWifi + "]\n";
@@ -197,7 +197,7 @@ public class OmnetppFiles {
 				str += "*.hostAP_Wifi[" + countWifi + "].mobility.initialY = " + ap.getY() + "m\n";
 				countWifi++;
 			}
-			
+
 			for (AP ap : this.env.getZigbeeAPs()) {
 				str += "\n";
 				str += "# AP_Zigbee[" + countZigbee + "]\n";
@@ -205,7 +205,7 @@ public class OmnetppFiles {
 				str += "*.hostAP_Zigbee[" + countZigbee + "].mobility.initialY = " + ap.getY() + "m\n";
 				countZigbee++;
 			}
-			
+
 			for (AP ap : this.env.getBluetoothAPs()) {
 				str += "\n";
 				str += "# AP_Bluetooth[" + countBluetooth + "]\n";
@@ -223,7 +223,7 @@ public class OmnetppFiles {
 				str += "*.hostDevice_Wifi[*].mobility.speed = 0mps\n";
 				str += "*.hostDevice_Wifi[*].mobility.initialZ = 1.7m\n";
 				str += "\n";
-				
+
 				i = 0;
 				for(Device dev : this.env.getWifiDevs()) {
 					str += "\n";
@@ -241,7 +241,7 @@ public class OmnetppFiles {
 				str += "*.hostDevice_Zigbee[*].mobility.speed = 0mps\n";
 				str += "*.hostDevice_Zigbee[*].mobility.initialZ = 1.7m\n";
 				str += "\n";
-				
+
 				i = 0;
 				for(Device dev : this.env.getZigbeeDevs()) {
 					str += "\n";
@@ -259,7 +259,7 @@ public class OmnetppFiles {
 				str += "*.hostDevice_Bluetooth[*].mobility.speed = 0mps\n";
 				str += "*.hostDevice_Bluetooth[*].mobility.initialZ = 1.7m\n";
 				str += "\n";
-				
+
 				i = 0;
 				for(Device dev : this.env.getBluetoothDevs()) {
 					str += "\n";
@@ -357,13 +357,13 @@ public class OmnetppFiles {
 		strIni += "\n";
 		strIni += "# Device channels and connections\n";
 
-    
+
 		int deviceWifi = 0;
 		int deviceZigbee = 0;
     	int deviceBluetooth = 0;
     	ArrayList<Device> sameConfig = new ArrayList<Device>();
     	util.copyDevices(this.env.getDevices(), sameConfig);
-    
+
 		for (Device dev : this.env.getDevices()) {
 			if(dev.getType().equals(DeviceType.WIFI)) {
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].app[0].destAddresses = \"hostAP_Wifi["
@@ -371,7 +371,7 @@ public class OmnetppFiles {
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].app[0].packetName = \"Wifi_Device[" + deviceWifi
 						+ "]-\"\n";
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].wlan[*].radio.channelNumber = 0\n";
-				
+
 				deviceWifi++;
 			}
 			if(dev.getType().equals(DeviceType.ZIGBEE)) {
@@ -399,7 +399,7 @@ public class OmnetppFiles {
 		strIni += "*.hostAP_Wifi[*].wlan[*].radio.channelNumber = 0\n";
 		strIni += "*.hostAP_Zigbee[*].wlan[*].radio.channelNumber = 0\n";
 		strIni += "*.hostAP_Bluetooth[*].wlan[*].radio.channelNumber = 0\n";
-    
+
     for(Device device: sameConfig){
       device.setChannel(0);
 	}
@@ -422,37 +422,37 @@ public class OmnetppFiles {
 		int deviceZigbee = 0;
 		int deviceBluetooth = 0;
     int ch = 0;
-		
-    ArrayList<AP> copyAPs = new ArrayList<AP>(); 
+
+    ArrayList<AP> copyAPs = new ArrayList<AP>();
     ArrayList<Device> copyDevices = new ArrayList<Device>();
 		util.copyAPs(this.env.getAPs(), copyAPs);
     util.copyDevices(this.env.getDevices(), copyDevices);
-    
+
 		for (AP ap : copyAPs) {
 			DeviceType type = ap.getType();
-			
+
 			switch (type) {
 			case WIFI:
 				ch = generateRandomChannel(0, 12);
 				ap.setChannel(ch);
 				break;
 			case ZIGBEE:
-				ch = generateRandomChannel(0, 15);
+				ch = generateRandomChannel(13, 28);
 				ap.setChannel(ch);
 				break;
 			case BLUETOOTH:
-				ch = generateRandomChannel(0, 36);
+				ch = generateRandomChannel(29, 65);
 				ap.setChannel(ch);
 				break;
-				
+
 			default:
 				break;
 
 			}
 		}
-		
+
 		AP auxAP = new AP();
-		
+
 		for (Device dev : this.env.getDevices()) {
 			for (AP ap : copyAPs) {
 				if(dev.getConnectedAPId() == ap.getId()) {
@@ -460,15 +460,15 @@ public class OmnetppFiles {
 					break;
 				}
 			}
-			
-			
+
+
 			if(dev.getType().equals(DeviceType.WIFI)) {
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].app[0].destAddresses = \"hostAP_Wifi["
 						+ dev.getConnectedAPId() / 3 + "]\"\n";
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].app[0].packetName = \"Wifi_Device[" + deviceWifi
 						+ "]-\"\n";
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].wlan[*].radio.channelNumber = " + auxAP.getChannel() + "\n";
-				
+
 				deviceWifi++;
 			}
 			if(dev.getType().equals(DeviceType.ZIGBEE)) {
@@ -477,7 +477,7 @@ public class OmnetppFiles {
 				strIni += "*.hostDevice_Zigbee[" + deviceZigbee + "].app[0].packetName = \"Zigbee_Device["
 						+ deviceZigbee + "]-\"\n";
 				strIni += "*.hostDevice_Zigbee[" + deviceZigbee + "].wlan[*].radio.channelNumber = "
-						+ auxAP.getChannel() + "\n";
+						+ (auxAP.getChannel() - 13) + "\n";
 
 				deviceZigbee++;
 			}
@@ -488,33 +488,33 @@ public class OmnetppFiles {
 				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
 						+ deviceBluetooth + "]-\"\n";
 				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = "
-						+ auxAP.getChannel()+ "\n";
+						+ (auxAP.getChannel() - 29) + "\n";
 
 				deviceBluetooth++;
       }
 		}
 
 		strIni += "#AP channels\n";
-		
+
 		int apID = 0;
 		for(AP ap : copyAPs) {
 			if(ap.getAmountOfDevicesConnected() == 0) {
 				apID++;
 				continue; // AP not used
 			}
-			
+
 			if (apID % 3 == 0) { // Wifi AP
 				strIni += "*.hostAP_Wifi[" + apID / 3 + "].wlan[*].radio.channelNumber = " + ap.getChannel() + "\n";
 			}
 			if (apID % 3 == 1) { // Zigbee AP
-				strIni += "*.hostAP_Zigbee[" + apID / 3 + "].wlan[*].radio.channelNumber = " + ap.getChannel()+ "\n";
+				strIni += "*.hostAP_Zigbee[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 13) + "\n";
 			}
 			if (apID % 3 == 2) { // Bluetooth AP
-				strIni += "*.hostAP_Bluetooth[" + apID / 3 + "].wlan[*].radio.channelNumber = " + ap.getChannel() + "\n";
+				strIni += "*.hostAP_Bluetooth[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 29) + "\n";
 			}
 			apID++;
     }
-    
+
     for(Device device: copyDevices){
       for(AP ap: copyAPs){
         if(device.getConnectedAPId() == ap.getId()){
@@ -526,7 +526,7 @@ public class OmnetppFiles {
     randomInterference = this.util.getDevicesInterference(copyDevices);
     System.out.println("Random config interference: " + randomInterference);
 	}
-	
+
 	public void prepateOmnetppCustom() {
 		strIni += "[Config CUSTOM]\n";
 		strIni += "extends = common\n";
@@ -541,7 +541,7 @@ public class OmnetppFiles {
 		int deviceWifi = 0;
 		int deviceZigbee = 0;
     int deviceBluetooth = 0;
-		
+
 		for (Device dev : this.env.getDevices()) {
 			if(dev.getType().equals(DeviceType.WIFI)) {
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].app[0].destAddresses = \"hostAP_Wifi["
@@ -549,7 +549,7 @@ public class OmnetppFiles {
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].app[0].packetName = \"Wifi_Device[" + deviceWifi
 						+ "]-\"\n";
 				strIni += "*.hostDevice_Wifi[" + deviceWifi + "].wlan[*].radio.channelNumber = " + dev.getChannel() + "\n";
-				
+
 				deviceWifi++;
 			}
 			if(dev.getType().equals(DeviceType.ZIGBEE)) {
@@ -576,14 +576,14 @@ public class OmnetppFiles {
 		}
 
 		strIni += "#AP channels\n";
-		
+
 		int apID = 0;
 		for(AP ap : this.env.getAPs()) {
 			if(ap.getAmountOfDevicesConnected() == 0) {
 				apID++;
 				continue; // AP not used
 			}
-			
+
 			if (apID % 3 == 0) { // Wifi AP
 				strIni += "*.hostAP_Wifi[" + apID / 3 + "].wlan[*].radio.channelNumber = " + ap.getChannel() + "\n";
 			}
@@ -664,7 +664,7 @@ public class OmnetppFiles {
 		}
 		strNed += "}\n";
 	}
-	
+
 	private int generateRandomChannel(int min, int max) {
 		Random foo = new Random();
 		int randomNumber = foo.nextInt((max + 1) - min) + min;
