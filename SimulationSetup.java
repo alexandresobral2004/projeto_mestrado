@@ -28,19 +28,21 @@ public class SimulationSetup{
                                                              accessPointManager,
                                                              util);
               try {
-                String retorno;
-            	  env.setInterferences(retorno = assigner.channelAPsOverllaping());
+            	  String retorno = assigner.channelAPsOverllaping();
             	  if(retorno!=null) {
             		  this.wc.salva2(retorno);
+            		 
             	  }
-
+            	 
               } catch (Exception e) {
                 //TODO: handle exception
                 e.printStackTrace();
               }
-
-
-             // env.setInterferences(assigner.channelChooser());
+              
+          
+              
+              
+              env.setInterferences(assigner.channelChooser());
               OmnetppFiles omnetppFiles = new OmnetppFiles(env, util, assigner, path, suffix);
 
               String nedFile = "../saida100-omnetpp/network-" + devices_scenario[j] + "-" + aps_scenario[k] + "-" + i + ".ned";
@@ -48,12 +50,12 @@ public class SimulationSetup{
 
               omnetppFiles.printINIFile(iniFile);
               omnetppFiles.printNEDFile(nedFile);
-              omnetppFiles.writeInterferencesFile("CUSTOM");
-              omnetppFiles.writeInterferencesFile("RANDOM");
-              omnetppFiles.writeInterferencesFile("SAME");
+            //  omnetppFiles.writeInterferencesFile("CUSTOM");
+            //  omnetppFiles.writeInterferencesFile("RANDOM");
+             // omnetppFiles.writeInterferencesFile("SAME");
               omnetppFiles.writeTimeElapsedFile();
-              System.out.println("Total amount of interference = " + env.getBestInterferences());
-              System.out.println("Elapsed time = " + assigner.getElapsedTime() + "s");
+             // System.out.println("Total amount of interference = " + env.getBestInterferences());
+            //  System.out.println("Elapsed time = " + assigner.getElapsedTime() + "s");
             }
         }
       }
