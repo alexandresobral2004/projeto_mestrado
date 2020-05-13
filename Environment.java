@@ -110,12 +110,12 @@ public class Environment {
 								//ARIBUI CANAL WIFI E  IMPRIME LOCAL E CANAL
 								ap.get(x).setChannel(setChannelWifi(canal[ch]));
 								
-								System.out.println("X_wf: "+x_location[temp_x] + "; Y_wf: "+y_location[temp_y]+ "; "+ canal[ch] );
+								System.out.println(+x_location[temp_x] + "; "+y_location[temp_y]+ "; w"+ canal[ch] );
 									
 								 
 								//ATRIBUI CANAL ZIGBEE  IMPRIME LOCAL E CANAL
 								 ap.get(z).setChannel(setChannelZigBee(canal[ch+1]));
-								 System.out.println("X_zb: "+x_location[temp_x + 1]+ "; Y_zb: "+y_location[temp_y] + "; "+canal[ch+1]);
+								 System.out.println(+x_location[temp_x + 1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
 								 
 								
 								
@@ -129,12 +129,12 @@ public class Environment {
 									
 									 ap.get(x).setChannel(setChannelWifi(canal[ch] = 11));
 									
-									 System.out.println("X_wf: "+x_location[temp_x]+ "; Y_wf: "+y_location[temp_y] + "; "+canal[ch]);
+									 System.out.println(+x_location[temp_x]+ "; "+y_location[temp_y] + "; w"+canal[ch]);
 									 
 									 ap.get(z).setChannel(setChannelZigBee(canal[ch+1] = 26));
 									
 									 
-									 System.out.println("X_zb: "+x_location[temp_x+1]+ "; Y_wf: "+y_location[temp_y] + "; "+canal[ch+1]);
+									 System.out.println(+x_location[temp_x+1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
 									 
 									 ch = 0;
 									 
@@ -174,7 +174,7 @@ public class Environment {
 						
 						ap.get(x).setY(y_location[temp_y]);
 					
-						System.out.println("X_zb: "+x_location[temp_x+1] + "; Y_zb: "+y_location[temp_y] );
+					//	System.out.println(+x_location[temp_x+1] + "; "+y_location[temp_y] );
 
 						
 						// WF
@@ -195,12 +195,12 @@ public class Environment {
 						if(canal[ch+1] < 24 && ap.get(x)!= null && ap.get(z)!= null ) {
 						 ap.get(z).setChannel(setChannelWifi(canal[ch]));
 						// System.out.println(canal2[ch]);
-						System.out.println("X_wf: "+x_location[temp_x] + "; Y_wf: "+y_location[temp_y]+ "; "+ canal[ch] );
+						System.out.println(+x_location[temp_x] + ";  "+y_location[temp_y]+ "; w"+ canal[ch] );
 						 
 						//ATRIBUI CANAL ZIGBEE
 						 ap.get(x).setChannel(setChannelZigBee(canal[ch+1]));
 						// System.out.println(canal2[ch+1]);
-						 System.out.println("X_zb: "+x_location[temp_x + 1]+ "; Y_zb: "+y_location[temp_y] + "; "+canal[ch+1]);
+						 System.out.println(+x_location[temp_x + 1]+ ";  "+y_location[temp_y] + "; z"+canal[ch+1]);
 						 
 					
 						
@@ -214,11 +214,11 @@ public class Environment {
 							
 							 ap.get(x).setChannel(setChannelWifi(canal[ch] = 11));
 							 
-							 System.out.println("X_wf: "+x_location[temp_x]+ "; Y_wf: "+y_location[temp_y] + "; "+canal[ch]);
+							 System.out.println(+x_location[temp_x]+ "; "+y_location[temp_y] + "; w"+canal[ch]);
 							 
 							 
 							 ap.get(x).setChannel(setChannelZigBee(canal[ch+1] = 26));
-							 System.out.println("X_zb: "+x_location[temp_x+1]+ "; Y_wf: "+y_location[temp_y] + "; "+canal[ch+1]);
+							 System.out.println(+x_location[temp_x+1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
 							 ch = 0;
 							 
 						}
