@@ -21,8 +21,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		this.devicesManager = devicesManager;
 		this.accessPointsManager = accessPointsManager;
 		this.util = util;
-		//TESTE
-		//teste
+		
 		
 
 		aux = this.accessPointsManager.initializeAPs(aux, this.env.getAPs());
@@ -175,12 +174,11 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 							if (interf > 0.0) {
 
-							APs2 = 	this.env.changeLocation(APs);
+						//	APs2 = 	this.env.changeLocation(APs);
 								//this.env.changeLocationDevice(device);
 								
 								// MÉTODO QUE MUDA O CANAL DO ZIGBEE SE ELE ESTIVER SOBREPOSTO E SETA NO AP2
-								ap2 = ap2 = APs2.get(k);
-									//	getResolverInterference(APs2.get(j), APs2.get(k), APs2.get(j).getChannel(),
+								ap2 = this.getResolverInterference(APs.get(j), APs.get(k), APs.get(j).getChannel(),APs2.get(k).getChannel());
 									//	APs2.get(k).getChannel());
 								
 								
@@ -193,7 +191,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 								
 
 								// calcula novamente a sobreposição para ver o que mudou
-								interf2 = this.util.getNormalizedInterference(APs2.get(j), APs2.get(j).getChannel(), ap2,ap2.getChannel());
+								interf2 = this.util.getNormalizedInterference(APs.get(j), APs.get(j).getChannel(), ap2,ap2.getChannel());
 								// exibe o canal pra ver se houve modificação
 								
 								
@@ -232,8 +230,8 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 								
 								
 								// imprime os resultados no arquivo teste.txt
-					   		 return df2.format(APs2.get(j).getX()) + "; " + df2.format(APs2.get(j).getY()) + "; "
-													+ "w"+(APs2.get(j).getChannel()+1) + "; \n" + df2.format(ap2.getX()-13) + "; "
+					   		 return df2.format(APs.get(j).getX()) + "; " + df2.format(APs.get(j).getY()) + "; "
+													+ "w"+(APs.get(j).getChannel()+1) + "; \n" + df2.format(ap2.getX()-13) + "; "
 														+ df2.format(ap2.getY()) + "; " + "z"+(ap2.getChannel()-13)+";";
 										 
 									/*	 "\n"
@@ -271,14 +269,13 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 							if (interf > 0.0) {
 
-							APs2 = 	this.env.changeLocation(APs);
+						//	APs2 = 	this.env.changeLocation(APs);
 								//this.env.changeLocationDevice(device);
 								
 								// MÉTODO QUE MUDA O CANAL DO ZIGBEE SE ELE ESTIVER SOBREPOSTO E SETA NO AP1
-								ap2 = APs2.get(j);
+							//	ap2 = APs2.get(j);
 										
-										//getResolverInterference(APs2.get(j),APs2.get(k), APs2.get(j).getChannel(),
-										//APs2.get(k).getChannel());
+							ap2 = getResolverInterference(APs2.get(j),APs2.get(k), APs2.get(j).getChannel(),APs.get(k).getChannel());
 								
 							
 								
@@ -295,7 +292,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 								// CONVERTE OS CANAIS DA TABELA PRA O FORMATO PADRÃO DO WIFI E ZIGBEE
 								// AFIM DE EXIBIR EM TEMPO DE EXECUÇÃO E NO ARQUIVO TESTE.TXT
-								int wifi_canal = getChannelWifi(APs2.get(k).getChannel());
+								int wifi_canal = getChannelWifi(APs.get(k).getChannel());
 								int zigbee_canal = getChannelZigBee(ap2.getChannel());
 								//SETA OS CANAIS
 							//	setChannelWifi(wifi_canal);
@@ -303,7 +300,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 								
 
 								// calcula novamente a sobreposição para ver o que mudou
-								interf2 = this.util.getNormalizedInterference(APs2.get(j), APs2.get(j).getChannel(), ap2,ap2.getChannel());
+								interf2 = this.util.getNormalizedInterference(APs.get(j), APs.get(j).getChannel(), ap2,ap2.getChannel());
 								// exibe o canal pra ver se houve modificação
 								
 								
@@ -311,8 +308,8 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 								System.out.println("");
 								System.out.println("**********************************************************");
-								System.out.println("Disp: " + APs2.get(k).getType().toString() + " Canal: " + wifi_canal);
-								System.out.println("Disp: " + APs2.get(j).getType().toString() + " Canal: " + zigbee_canal);
+								System.out.println("Disp: " + APs.get(k).getType().toString() + " Canal: " + wifi_canal);
+								System.out.println("Disp: " + APs.get(j).getType().toString() + " Canal: " + zigbee_canal);
 								System.out.println("Fator de interf. antes " + df.format(interf));
 								System.out.println("Fator de interf. depois " + df.format(interf2));
 								System.out.println("Distância: " + this.util.getDistance(APs2.get(k), ap2));
@@ -334,17 +331,11 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 								long elapsedTimeMillis = System.currentTimeMillis() - start;
 								this.elapsedTimeSec = elapsedTimeMillis / 1000F;
-						
-								//IMPRIME INTERF ENTRE DEVICES
-				//				localInterference = this.util.getDevicesInterference(this.env.getDevices());
-				//				interferences.add(localInterference);
-				//			
-				//				return String.valueOf(localInterference);
+				
 								
 								
-								
-								   return df2.format(APs2.get(k).getX()) + "; " + df2.format(APs2.get(k).getY()) + "; "
-									+"w"+ (APs2.get(k).getChannel()+1) + ";\n " + df2.format(ap2.getX()) + "; "
+								   return df2.format(APs.get(k).getX()) + "; " + df2.format(APs.get(k).getY()) + "; "
+									+"w"+ (APs.get(k).getChannel()+1) + ";\n " + df2.format(ap2.getX()) + "; "
 									+ df2.format(ap2.getY()) + "; " + "z"+(ap2.getChannel()-13)+";";
 										 
 								/*		 "\n"
@@ -376,6 +367,14 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 				}
 					
 			}
+			devicesManager.fillDevicesInfo(this.env.getDevices());
+					
+								//IMPRIME INTERF ENTRE DEVICES
+								localInterference = this.util.getDevicesInterference(this.env.getDevices());
+								interferences.add(localInterference);
+							
+							//	return String.valueOf(localInterference);
+								
 		}
 			
 		
@@ -398,7 +397,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		return a;
 
 	}
-
+  
 	public int getChannelZigBee(int y) {
 		int a = y -13;
 		return a;
@@ -648,8 +647,12 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 	@Override
 	public ArrayList<Float> channelChooser() {
-		// TODO Auto-generated method stub.
+		// TODO Auto-generated method stub
 		return null;
 	}
+
+	
+	
+
 
 }

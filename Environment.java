@@ -260,8 +260,11 @@ public class Environment {
 				}
 
 
+
 			}
+			devicesManager.fillDevicesInfo(getDevices());
 		}
+	
 		return ap;
 
 	}
