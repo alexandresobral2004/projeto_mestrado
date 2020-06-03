@@ -6,6 +6,10 @@ import java.util.List;
 import java.util.Random;
 import java.util.zip.Inflater;
 
+import org.jamesframework.core.problems.objectives.Objective;
+import org.jamesframework.core.problems.objectives.evaluations.Evaluation;
+import org.jamesframework.core.subset.SubsetSolution;
+
 public class ChannelAssigner implements ChannelAssignerInterface {
 	private  int[] aux;
 	private  Util util;
@@ -536,84 +540,119 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 	public int setChannelZigBee(final int x) {
 		return x + 13;
 	}
+	
+	
+	// MÉTODO PARA ITERAR SOBRE OS CANAIS
+		/*public ArrayList<Integer> getNextChannelWifi(AP ap, AP ap1) {
+			 ArrayList<Integer> ch = new ArrayList<>();
+			
+			float inter_factor = util.getAPsInterference(env.getAPs());
+			float interf_temp = inter_factor;
+			int wf=0;
+			int zb=0;
+			
+
+			for (int z=0;z <=12;z++) {
+				for (int y = 0; y <= 15; y++) {
+
+					ap.setChannel(z);//wf
+					ap1.setChannel(y+13);//zb
+				
+					inter_factor = util.getAPsInterference(env.getAPs());
+
+					if (inter_factor < interf_temp) {
+						interf_temp = inter_factor;
+						
+						  wf=z;
+						  zb=y+13;
+						
+					}
+				
+
+				}
+
+				
+			}
+				ch.add(wf);
+				ch.add(zb);
+				return ch;
+
+		}*/
 
 	// MÉTODO PARA ITERAR SOBRE OS CANAIS
-	public  ArrayList<Integer> getNextChannelZigbee(AP ap, AP ap2) {
+	public  Integer getNextChannelZigbee(AP ap) {
 		ArrayList<Integer> ch = new ArrayList<>();
 		float inter_factor = util.getAPsInterference(env.getAPs());
 		float interf_temp = inter_factor;
-		int wf=0;
-		int zb=0;
+		int channel=0;
+		int best_ch=ap.getChannel();
+	
 
 		
 
-		for (int x = 0; x <= 15; x++) {
+		for (int x = 13; x <= 28; x++) {
+			channel = x;
 
-			for (int z=0;z <=12;z++) {
-
-			ap2.setChannel(x + 13);// acrecento 13 pra poder corrsponder a tabela
-			ap.setChannel(z);
-			inter_factor = util.getAPsInterference(env.getAPs());
+			ap.setChannel(channel);
+			
+			inter_factor = this.util.getAPsInterference(env.getAPs());
 
 			if (inter_factor < interf_temp) {
 				interf_temp = inter_factor;
-				wf = z;
-				zb=x+13;
+				best_ch = channel;
+				
 
 			}
 
 		}
+		return  best_ch;
+	}
 			
-	}
-			ch.add(wf);
-			ch.add(zb);
-			return ch;
 
-	}
+	
 
-	// MÉTODO PARA ITERAR SOBRE OS CANAIS
-	public ArrayList<Integer> getNextChannelWifi(AP ap, AP ap1) {
+	
+	
+	public Integer getNextChannelWifi(AP ap) {
 		 ArrayList<Integer> ch = new ArrayList<>();
 		
 		float inter_factor = util.getAPsInterference(env.getAPs());
 		float interf_temp = inter_factor;
-		int wf=0;
-		int zb=0;
+		int channel=0;
+		int best_ch=ap.getChannel();
+		
 		
 
 		for (int z=0;z <=12;z++) {
-			for (int y = 0; y <= 15; y++) {
-
+			
+				
 				ap.setChannel(z);//wf
-				ap1.setChannel(y+13);//zb
 			
 				inter_factor = util.getAPsInterference(env.getAPs());
+				channel = ap.getChannel();
 
 				if (inter_factor < interf_temp) {
 					interf_temp = inter_factor;
 					
-					  wf=z;
-					  zb=y+13;
+					  best_ch= channel;
+					  
 					
 				}
-				else{
-
-				}
+			
 
 			}
+			return best_ch;
 
 			
 		}
-			ch.add(wf);
-			ch.add(zb);
-			return ch;
+			
 
-	}
+	
 
 	public void getMitigaterInterference() {
 		final long start = System.currentTimeMillis();
 
-		final ArrayList<AP> APs = this.env.getAPs();
+		 ArrayList<AP> APs = this.env.getAPs();
 		/*
 		 * DecimalFormat df2 = new DecimalFormat("##.####"); DecimalFormat df3 = new
 		 * DecimalFormat("##.#"); ArrayList<AP> aps = new ArrayList<>(); int canal_wifi;
@@ -621,6 +660,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		
 
 		// CALCULA A INTERFERÊNCIA DOS AP'S
+		
 		float global_interf = util.getAPsInterference(env.getAPs());
 		final ArrayList<Float> interferences = new ArrayList<Float>();
 
@@ -628,193 +668,196 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		float inter_factor1 = 0.0f;
 		float inter_factor2 = 0.0f;
 		float inter_factor3 = 0.0f;
-		float inter_factor4 = 0.0f;
-	    float testInterf = 0.0f;
+	
 
 		// float media_interf=global_interf;
 		float localInterference = 0.0f;
 		// float tempInterf=0.0f;
-
-		int a = 0;
-
-		int count = 0;
-		 int contWhile = 1;
-		
 		 int wf=0;
 		 int zb=0;
-		 int zb2=0;
-		 int wf2=0;
-		 int zb_temp=0;
-		 int wf_temp=0;
-		 int g =0;
-		 int h = 0;
-		 ArrayList<Integer> ch;
+		 int count=0;
+		 int wifi=0;
+    	 int zigbee=0; 
 		
-	//	while (this.env.getAmountOfDevices() > count) {
-
+		for(int u=0;u< env.getDevices().size()*2;u++) {
+			util.generateAPsRandomChannels(env.getAPs());
 			for (int x = 0; x < APs.size(); x++) {
-				this.util.generateAPsRandomChannels(APs);
-
 				for (int y = 0; y < APs.size(); y++) {
+					 
+				
 
 					if (APs.get(x).getType().toString() == "WIFI" && APs.get(y).getType().toString() == "ZIGBEE") {
-
+						
+					
 
 							// TRATAMENTO WIFI
-							
-							ch = new ArrayList<>();
+						inter_factor1 = util.getAPsInterference(env.getAPs());
+						wifi = APs.get(x).getChannel();//wf
+						zigbee = APs.get(y).getChannel();//zb
+ 					
+					while(count <=2) {
 							//TESTA INICIALMENTE A INTERF
-							inter_factor1 = util.getAPsInterference(env.getAPs());
-						
 							
-							//BUSCA A MENOR INTERF MUDANDO CANAL
-							ch = getNextChannelWifi(APs.get(x), APs.get(y));
 							
-							g = ch.get(0);//WF
-							h = ch.get(1);//ZB
+							//BUSCA A MENOR INTERF MUDANDO CANAL WIFI
+							wf = getNextChannelWifi(APs.get(x));				
+							zb = getNextChannelZigbee(APs.get(y));
 							
-							/*if(g == 0 && h == 0){
-								g = wf_temp;
-								h = zb_temp;
-							}*/
-							
-							//ATRIBUI OS CANAIS BUSCADOS E TESTA INTERF
-							APs.get(x).setChannel(g);//wf
-							APs.get(y).setChannel(h);//zb
-							devicesManager.fillDevicesInfo(this.env.getDevices());
-							
+							//ATRIBUI OS CANAIS BUSCADOS NO WIFI E ZIGBEE E TESTA INTERF
+							APs.get(x).setChannel(wf);//wf
+							APs.get(y).setChannel(zb);//zb	
 							inter_factor2 = util.getAPsInterference(env.getAPs());
+							
+							
 						
-							if (inter_factor1 < inter_factor2) {
+						count+=1;
+ 					}
+ 					count=0;
+						
+							if ( inter_factor1 < inter_factor2) {
 								
-								if (inter_factor1 <= best_interf) {
+								if (inter_factor1 < best_interf) {
 									best_interf = inter_factor1;
 									//guarda o melhor canal
-									wf_temp = APs.get(x).getChannel();
-									zb_temp = APs.get(y).getChannel()+13;
+									int	wf_temp1 = wifi;
+									int	zb_temp1 = zigbee;
 									
-									APs.get(y).setChannel(zb_temp);//zb
-									APs.get(x).setChannel(wf_temp);//wf
-								devicesManager.fillDevicesInfo(this.env.getDevices());
-								inter_factor3 = util.getAPsInterference(env.getAPs());
-
+									
+									APs.get(x).setChannel(wf_temp1);//wf
+									APs.get(y).setChannel(zb_temp1);//zb
+							
 								}
 							
 
 
-							} else if (inter_factor1 > inter_factor2) {
-								if (inter_factor2 <= best_interf) {
+							} else if (inter_factor2 < inter_factor1) {
+								if (inter_factor2 < best_interf) {
 									best_interf = inter_factor2;
-									//guarda o melhor canal
-									wf_temp = ch.get(0);
-									zb_temp = ch.get(1);
+										//guarda o melhor canal
+										int	wf_temp2 = wf;
+										int	zb_temp2 = zb;
+								
+								
+									APs.get(x).setChannel(wf_temp2);//wf
+									APs.get(y).setChannel(zb_temp2);//zb
 									
-									int c = ch.get(0);//wf
-									int d = ch.get(1);//zb
-									APs.get(y).setChannel(d);//zb
-									APs.get(x).setChannel(c);//wf
-									inter_factor3 = util.getAPsInterference(env.getAPs());
-									devicesManager.fillDevicesInfo(this.env.getDevices());
 								
 
 								}
 								
 							}
-						}
+							else if (inter_factor1 > best_interf && inter_factor1 > inter_factor2) {
+								if(inter_factor2 < inter_factor1) {
+									int	wf_temp3 = wf;
+									int	zb_temp3 = zb;
+									APs.get(x).setChannel(wf_temp3);//wf
+									APs.get(y).setChannel(zb_temp3);//zb
+							
+									
+								}
+							}
+							devicesManager.fillDevicesInfo(this.env.getDevices());
+					
+					}
 							
 				
 					if (APs.get(x).getType().toString() == "ZIGBEE" && APs.get(y).getType().toString() == "WIFI") {
 						
-
-								// TRATAMENTO WIFI
-
-
-								 ch = new ArrayList<>();
-								
-								 inter_factor1 = util.getAPsInterference(env.getAPs());
-
-								 ch = getNextChannelWifi(APs.get(y), APs.get(x));
-								 
-								
-								 g =ch.get(0);
-								 h = ch.get(1);
-								/* if(g == 0 && h == 0){
-									g = wf_temp;
-									h = zb_temp;
-									
-								}*/
-								
-
-								 APs.get(x).setChannel(h);
-								 APs.get(y).setChannel(g);
-								 devicesManager.fillDevicesInfo(this.env.getDevices());
-								
-								inter_factor2 = util.getAPsInterference(env.getAPs());
-								
-	
-								// TRATAMENTO ZIGBEE
-							/*	ch2 = getNextChannelZigbee(APs.get(y),APs.get(x));
-								APs.get(y).setChannel(ch2.get(0));//wf
-								APs.get(x).setChannel(ch2.get(1));//zb*/
+						
+						
+						while(count <=2) {
+									inter_factor1 = util.getAPsInterference(env.getAPs());
+									 wifi = APs.get(y).getChannel();//wf
+									 zigbee = APs.get(x).getChannel();//zb
 							
+									//BUSCA A MENOR INTERF MUDANDO CANAL
+									wf = getNextChannelWifi(APs.get(y));						
+									zb = getNextChannelZigbee(APs.get(x));
+								
 
-								if (inter_factor1 < inter_factor2) {
-									if (inter_factor1 <= best_interf) {
-										best_interf = inter_factor1;
-										//guarda o melhor canal
-										wf_temp = APs.get(y).getChannel();
-										zb_temp = APs.get(x).getChannel()+13;
-
-										
-										APs.get(x).setChannel(zb_temp);//zb
-										APs.get(y).setChannel(wf_temp);//wf
-										devicesManager.fillDevicesInfo(this.env.getDevices());
-										inter_factor3 = util.getAPsInterference(env.getAPs());
-
-									}
+									//ATRIBUI OS CANAIS BUSCADOS E TESTA INTERF
+									APs.get(y).setChannel(wf);//wf
+									APs.get(x).setChannel(zb);//zb
+									inter_factor2 = util.getAPsInterference(env.getAPs());
+									devicesManager.fillDevicesInfo(this.env.getDevices());
 									
-
-								} else if (inter_factor1 > inter_factor2) {
-									if (inter_factor2 <= best_interf) {
-										best_interf = inter_factor2;
-										
-										//guarda o melhor canal
-										wf_temp = ch.get(0);
-										zb_temp = ch.get(1);
-
-										
-										APs.get(y).setChannel(wf_temp);// WF
-										APs.get(x).setChannel(zb_temp);// ZB
-										devicesManager.fillDevicesInfo(this.env.getDevices());
-									inter_factor3 = util.getAPsInterference(env.getAPs());
-
-									}
 									
+								
+									
+							count+=1;		
+						}
+						count=0;
 
-								}
+									if ( inter_factor1 < inter_factor2) {
+										
+										if (inter_factor1 < best_interf) {
+											best_interf = inter_factor1;
+											//guarda o melhor canal
+											int	wf_temp1 = wifi;
+											int	zb_temp1 = zigbee;
+											
+											
+											APs.get(y).setChannel(wf_temp1);//wf
+											APs.get(x).setChannel(zb_temp1);//zb
+									
+										}
+									
+			
+			
+									} else if (inter_factor2 < inter_factor1) {
+										if (inter_factor2 < best_interf) {
+											best_interf = inter_factor2;
+												//guarda o melhor canal
+												int	wf_temp2 = wf;
+												int	zb_temp2 = zb;
+										
+										
+											APs.get(y).setChannel(wf_temp2);//wf
+											APs.get(x).setChannel(zb_temp2);//zb
+											
+										
+			
+										}
+										
+									}
+									else if (inter_factor1 > best_interf && inter_factor1 > inter_factor2) {
+										if(inter_factor2 < inter_factor1 && inter_factor2 >=best_interf) {
+											int	wf_temp3 = wf;
+											int	zb_temp3 = zb;
+											APs.get(y).setChannel(wf_temp3);//wf
+											APs.get(x).setChannel(zb_temp3);//zb
+									
+											
+										}
+									}
+								
 
 						
 
 								devicesManager.fillDevicesInfo(this.env.getDevices());
+								
 
-						}
+				
+					}
 					
 						
 				}
-				devicesManager.fillDevicesInfo(this.env.getDevices());
 				best_interf = util.getAPsInterference(env.getAPs());
-
 				devicesManager.fillDevicesInfo(this.env.getDevices());
 				localInterference = this.util.getDevicesInterference(this.env.getDevices());
 				interferences.add(localInterference);
 
 			
 
-				count += 1;
+			
+				
 			}
+			
+			
+		}
 			final long elapsedTimeMillis = System.currentTimeMillis() - start;
 			this.elapsedTimeSec=elapsedTimeMillis/1000F;System.out.println("Tempo total : "+this.elapsedTimeSec);
-		}
+	}
 	
 		
 

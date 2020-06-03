@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!-- inherit from Sonatype OSS parent POM -->
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
+    <!-- project info -->
+    <groupId>org.jamesframework</groupId>
+    <artifactId>james</artifactId>
+    <version>1.3-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>james</name>
+    <description>JAMES is a Java framework for discrete optimization using local search metaheuristics.</description>
+    <url>http://www.jamesframework.org</url>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <connection>scm:git:git@github.com:hdbeukel/james.git</connection>
+        <developerConnection>scm:git:git@github.com:hdbeukel/james.git</developerConnection>
+        <url>https://github.com/hdbeukel/james</url>
+    </scm>
+    <developers>
+        <developer>
+            <id>hdbeukel</id>
+            <name>Herman De Beukelaer</name>
+            <email>Herman.DeBeukelaer@UGent.be</email>
+        </developer>
+    </developers>
+    <modules>
+        <module>james-core</module>
+        <module>james-extensions</module>
+        <module>james-examples</module>
+    </modules>
+    <dependencies>
+        <!-- All modules use junit for testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- All modules use slf4j logging facade -->
+        <!-- Specific binding can be set by end-user,
+        else it will default to NOP with warning  -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.12</version>
+        </dependency>
+        <!-- All modules use logback slf4j binding for testing -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <properties>
+        <!-- set heap size to work around http://github.com/travis-ci/travis-ci/issues/3396 -->
+        <argLine>-Xmx1024m</argLine>
+    </properties>
+    <build>
+        <plugins>
+            <!-- Sonatype OSSRH plugin -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.5</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+            <!-- set compiler to use java 1.8 and to compile with -Xlint:unchecked -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                    <compilerArguments>
+                        <!-- warn for unchecked or unsafe operations -->
+                        <Xlint:unchecked />
+                        <!-- fail on warnings -->
+                        <Werror />
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+            <!-- Surefire settings -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
+            </plugin>
+            <!-- JaCoCo test coverage -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.4.201502262128</version>
+                <executions>
+                    <execution>
+                        <id>prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- no coverage reporting for examples module -->
+                    <excludes>
+                        <exclude>org/jamesframework/examples/**/*</exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+            <!-- Coveralls reporting plugin -->
+            <plugin>
+                <groupId>org.eluder.coveralls</groupId>
+                <artifactId>coveralls-maven-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
+            <!-- create test jars -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.6</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test-jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <skipIfEmpty>
+                        true
+                    </skipIfEmpty>
+                </configuration>
+            </plugin>
+            <!-- create source jars -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.4</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- create javadoc jars -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!-- omit timestamp comments in javadoc files -->
+                    <notimestamp>true</notimestamp>
+                    <additionalparam>-notimestamp</additionalparam>
+                    <!-- include MathJax javascript for LaTeX style Math -->
+                    <additionalparam>-header &apos;&lt;script type=&quot;text/javascript&quot; src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;MathJax.Hub.Config({displayAlign:&quot;left&quot;});MathJax.Hub.Config({displayIndent:&quot;2em&quot;});&lt;/script&gt;&apos;</additionalparam>
+                </configuration>
+            </plugin>
+        </plugins>
+        <resources>
+            <!-- include LICENSE and NOTICE of respective module in generated jars -->
+            <resource>
+                <directory>.</directory>
+                <targetPath>META-INF</targetPath>
+                <includes>
+                    <include>LICENSE</include>
+                    <include>NOTICE</include>
+                </includes>
+            </resource>
+            <!-- still include all resources in default location too -->
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <testResources>
+            <!-- include LICENSE and NOTICE of respective module in generated test jars -->
+            <testResource>
+                <directory>.</directory>
+                <targetPath>META-INF</targetPath>
+                <includes>
+                    <include>LICENSE</include>
+                    <include>NOTICE</include>
+                </includes>
+            </testResource>
+            <!-- still include all test resources in default location too -->
+            <testResource>
+                <directory>src/test/resources</directory>
+            </testResource>
+        </testResources>
+    </build>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <profiles>
+        <!-- release profile (activates GPG signing) -->
+        <profile> 
+            <id>release</id>
+            <build>
+                <plugins>
+                    <!-- GPG signed components -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>1.6</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>

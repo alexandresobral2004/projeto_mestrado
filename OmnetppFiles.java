@@ -16,6 +16,8 @@ public class OmnetppFiles {
     private float customInterference;
     private float sameInterference;
     private float randomInterference;
+    String random;
+    String custom;
 
 
 	public OmnetppFiles(Environment env, Util util, ChannelAssignerInterface assigner, String path, String suffix) {
@@ -40,12 +42,16 @@ public class OmnetppFiles {
     String configFileName = path + config + suffix;
     try(FileWriter writer = new FileWriter(configFileName, true)){
       if(config.equals("CUSTOM")){
+    	
         writer.write(Float.toString(customInterference));
         writer.write(System.getProperty("line.separator"));
+        
       }
       else if(config.equals("RANDOM")){
+    
         writer.write(Float.toString(randomInterference));
         writer.write(System.getProperty("line.separator"));
+       
       }
       else{
         writer.write(Float.toString(sameInterference));
@@ -671,4 +677,26 @@ public class OmnetppFiles {
 
 		return randomNumber;
 	}
+
+	public String getRandom() {
+		return random;
+	}
+
+	
+
+	public String getCustom() {
+		return custom;
+	}
+
+	public void setRandom(String random) {
+		this.random = random;
+	}
+
+	public void setCustom(String custom) {
+		this.custom = custom;
+	}
+	
+
+	
+	
 }

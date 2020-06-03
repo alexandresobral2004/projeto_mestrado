@@ -109,13 +109,82 @@ public final class WriteConsole {
 			
 		
 		 try {
-	            // Conteudo
+	           
 	           
 
 	            // Cria arquivo
 	        
 	            // Se o arquivo nao existir, ele gera
-			 	File file = new File("teste.txt");
+			 	File file = new File("custom.txt");
+	            if (!file.exists()) {
+	                file.createNewFile();
+	            }
+
+	            // Prepara para escrever no arquivo
+	            fw = new FileWriter(file.getAbsoluteFile(),true);
+	            bw = new BufferedWriter(fw);
+	            if( texto != null) {
+	            	   bw.write("\n"+texto);
+	            }
+	         
+	            
+	            
+	            // PrintWriter pw = new PrintWriter(bw);
+	           // Scanner ler = new Scanner(System.in);
+	            
+		 } finally {
+
+				try {
+
+					if (bw != null)
+						bw.close();
+
+					if (fw != null)
+						fw.close();
+
+				} catch (IOException ex) {
+
+					ex.printStackTrace();
+
+				}
+	            
+	            // Escreve e fecha arquivo
+	            
+	            
+	           // pw.println(texto);
+	            //pw.println();
+	            //pw.close();
+	           
+	            
+	            
+	            // Le o arquivo
+	       /*     FileReader ler = new FileReader("teste.txt");
+	            BufferedReader reader = new BufferedReader(ler);  
+	            String linha;
+	            while( (linha = reader.readLine()) != null ){
+	                System.out.println(linha);
+	            }*/
+
+		 }
+		}
+		
+	}
+	
+
+	public void salva3(String texto) throws IOException {
+		boolean teste = gravaString(texto);
+		
+		if(teste == true) {
+			
+		
+		 try {
+	           
+	           
+
+	            // Cria arquivo
+	        
+	            // Se o arquivo nao existir, ele gera
+			 	File file = new File("random.txt");
 	            if (!file.exists()) {
 	                file.createNewFile();
 	            }

@@ -16,7 +16,7 @@ public class SimulationSetup{
         this.rep = rep;
     }
 
-    public void runSimulation(){
+    public void runSimulation() throws IOException{
       for(int j = 0; j < devices_scenario.length; j++) {
         for(int k = 0; k < aps_scenario.length; k++) {
             final String path = "../saida100-omnetpp/";
@@ -42,9 +42,10 @@ public class SimulationSetup{
             		 
             
               
-         
+            	   
               env.setInterferences(assigner.channelChooser());
               final OmnetppFiles omnetppFiles = new OmnetppFiles(env, util, assigner, path, suffix);
+            
 
               final String nedFile = "../saida100-omnetpp/network-" + devices_scenario[j] + "-" + aps_scenario[k] + "-" + i + ".ned";
               final String iniFile = "../saida100-omnetpp/parameters-" + devices_scenario[j] + "-" + aps_scenario[k] + "-" + i + ".ini";
