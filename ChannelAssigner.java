@@ -667,7 +667,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		float best_interf = global_interf;
 		float inter_factor1 = 0.0f;
 		float inter_factor2 = 0.0f;
-		float inter_factor3 = 0.0f;
+		
 	
 
 		// float media_interf=global_interf;
@@ -678,9 +678,13 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		 int count=0;
 		 int wifi=0;
     	 int zigbee=0; 
+    	 int count2=5;
+    	
 		
-		for(int u=0;u< env.getDevices().size()*2;u++) {
+		for(int u=0;u< count2;u++) {
 			util.generateAPsRandomChannels(env.getAPs());
+		
+			
 			for (int x = 0; x < APs.size(); x++) {
 				for (int y = 0; y < APs.size(); y++) {
 					 
@@ -855,8 +859,12 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 			
 			
 		}
+	
 			final long elapsedTimeMillis = System.currentTimeMillis() - start;
-			this.elapsedTimeSec=elapsedTimeMillis/1000F;System.out.println("Tempo total : "+this.elapsedTimeSec);
+			this.elapsedTimeSec=elapsedTimeMillis/1000F;
+			System.out.println("######################################################");
+			System.out.println("Tempo total : "+this.elapsedTimeSec);
+			System.out.println("######################################################");
 	}
 	
 		
