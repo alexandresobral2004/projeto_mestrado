@@ -6,7 +6,7 @@ public interface ChannelAssignerInterface{
     public void setElapsedTime(float runtime);
     
     public String channelAPsOverllaping();
-    public void getMitigaterInterference();
+    public ArrayList<Float> getMitigaterInterference();
     
     
 }

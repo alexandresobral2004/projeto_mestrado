@@ -30,7 +30,7 @@ public class SimulationSetup{
                                                              accessPointManager,
                                                              util);
             
-            	    assigner.getMitigaterInterference();
+            	env.setInterferences(assigner.getMitigaterInterference());
             	/*  if(retorno!=null) {
                   this.wc.salva2(retorno);
                 }
@@ -52,12 +52,12 @@ public class SimulationSetup{
 
               omnetppFiles.printINIFile(iniFile);
               omnetppFiles.printNEDFile(nedFile);
-          //    omnetppFiles.writeInterferencesFile("CUSTOM");
-           //   omnetppFiles.writeInterferencesFile("RANDOM");
-            //  omnetppFiles.writeInterferencesFile("SAME");
+              omnetppFiles.writeInterferencesFile("CUSTOM");
+              omnetppFiles.writeInterferencesFile("RANDOM");
+              omnetppFiles.writeInterferencesFile("SAME");
               omnetppFiles.writeTimeElapsedFile();
-            //  System.out.println("Total amount of interference = " + env.getBestInterferences());
-             // System.out.println("Elapsed time = " + assigner.getElapsedTime() + "s");
+            // System.out.println("Total amount of interference = " + env.getBestInterferences());
+            // System.out.println("Elapsed time = " + assigner.getElapsedTime() + "s");
 
 
 

@@ -1,0 +1,1196 @@
+1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+######################################################
+Tempo total : 29.534
+######################################################
+global_interf: 53.36084
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 325.86298
+Random config interference: 70.00373
+Custom config interference: 53.36084
+######################################################
+Tempo total : 29.286
+######################################################
+global_interf: 52.245983
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 321.8288
+Random config interference: 71.64732
+Custom config interference: 52.245983
+######################################################
+Tempo total : 30.298
+######################################################
+global_interf: 54.829617
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 326.49753
+Random config interference: 69.12701
+Custom config interference: 54.829617
+######################################################
+Tempo total : 28.759
+######################################################
+global_interf: 51.00873
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 322.46262
+Random config interference: 67.87797
+Custom config interference: 51.00873
+######################################################
+Tempo total : 29.3
+######################################################
+global_interf: 49.154728
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 318.9932
+Random config interference: 70.46663
+Custom config interference: 49.154728
+######################################################
+Tempo total : 29.579
+######################################################
+global_interf: 50.94525
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 311.85513
+Random config interference: 65.094635
+Custom config interference: 50.94525
+######################################################
+Tempo total : 29.267
+######################################################
+global_interf: 52.483177
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 317.22037
+Random config interference: 68.65571
+Custom config interference: 52.483177
+######################################################
+Tempo total : 29.337
+######################################################
+global_interf: 48.805973
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 313.9621
+Random config interference: 62.37292
+Custom config interference: 48.805973
+######################################################
+Tempo total : 29.644
+######################################################
+global_interf: 49.19552
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 312.08936
+Random config interference: 60.58328
+Custom config interference: 49.19552
+######################################################
+Tempo total : 29.309
+######################################################
+global_interf: 54.113853
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 323.11905
+Random config interference: 71.126396
+Custom config interference: 54.113853
+######################################################
+Tempo total : 29.979
+######################################################
+global_interf: 56.78643
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 320.69257
+Random config interference: 75.37936
+Custom config interference: 56.78643
+1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+######################################################
+Tempo total : 57.047
+######################################################
+global_interf: 52.631542
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 318.01453
+Random config interference: 59.367447
+Custom config interference: 52.631542
+1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.2 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.4 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.6 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.2 0.4 0.6 0.8 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.5 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 
+0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 1.0 
+######################################################
+Tempo total : 27.66
+######################################################
+global_interf: 52.259056
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 319.08282
+Random config interference: 69.3682
+Custom config interference: 52.259056
+######################################################
+Tempo total : 28.195
+######################################################
+global_interf: 49.44817
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 314.29504
+Random config interference: 65.97888
+Custom config interference: 49.44817
+######################################################
+Tempo total : 28.289
+######################################################
+global_interf: 51.97603
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 316.31992
+Random config interference: 65.83368
+Custom config interference: 51.97603
+######################################################
+Tempo total : 27.823
+######################################################
+global_interf: 49.70743
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 321.57486
+Random config interference: 68.06163
+Custom config interference: 49.70743
+######################################################
+Tempo total : 27.51
+######################################################
+global_interf: 48.128197
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 315.4041
+Random config interference: 57.940144
+Custom config interference: 48.128197
+######################################################
+Tempo total : 28.135
+######################################################
+global_interf: 49.997437
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 312.761
+Random config interference: 66.31471
+Custom config interference: 49.997437
+######################################################
+Tempo total : 27.612
+######################################################
+global_interf: 52.694897
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 323.51144
+Random config interference: 74.73716
+Custom config interference: 52.694897
+######################################################
+Tempo total : 28.175
+######################################################
+global_interf: 53.42553
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 315.99997
+Random config interference: 66.968765
+Custom config interference: 53.42553
+######################################################
+Tempo total : 27.67
+######################################################
+global_interf: 54.25464
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 316.934
+Random config interference: 68.35535
+Custom config interference: 54.25464
+######################################################
+Tempo total : 28.048
+######################################################
+global_interf: 49.548214
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 312.1898
+Random config interference: 69.31826
+Custom config interference: 49.548214
+######################################################
+Tempo total : 28.228
+######################################################
+global_interf: 49.524906
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 316.1742
+Random config interference: 61.056904
+Custom config interference: 49.524906
+######################################################
+Tempo total : 28.786
+######################################################
+global_interf: 57.136356
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 320.33267
+Random config interference: 84.121445
+Custom config interference: 57.136356
+######################################################
+Tempo total : 28.684
+######################################################
+global_interf: 50.058018
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 313.5817
+Random config interference: 70.977585
+Custom config interference: 50.058018
+######################################################
+Tempo total : 28.36
+######################################################
+global_interf: 54.48034
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 318.7201
+Random config interference: 71.20299
+Custom config interference: 54.48034
+######################################################
+Tempo total : 29.055
+######################################################
+global_interf: 51.70459
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 318.34152
+Random config interference: 67.89904
+Custom config interference: 51.70459
+######################################################
+Tempo total : 28.707
+######################################################
+global_interf: 49.52198
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 320.32632
+Random config interference: 61.105278
+Custom config interference: 49.52198
+######################################################
+Tempo total : 28.518
+######################################################
+global_interf: 55.76555
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 326.98602
+Random config interference: 71.02274
+Custom config interference: 55.76555
+######################################################
+Tempo total : 29.18
+######################################################
+global_interf: 49.71646
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 316.10037
+Random config interference: 69.3756
+Custom config interference: 49.71646
+######################################################
+Tempo total : 29.252
+######################################################
+global_interf: 51.470303
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 317.01495
+Random config interference: 71.544304
+Custom config interference: 51.470303
+######################################################
+Tempo total : 32.318
+######################################################
+global_interf: 50.96942
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 200
+Amount Wi-Fi Dev: 80
+Amount Zigbee Dev: 100
+Amount Bluetooth Dev: 20
+Same config interference: 317.65854
+Random config interference: 76.61379
+Custom config interference: 50.96942
+######################################################
+Tempo total : 47.374
+######################################################
+global_interf: 121.50048
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 711.9821
+Random config interference: 170.028
+Custom config interference: 121.50048
+######################################################
+Tempo total : 52.346
+######################################################
+global_interf: 122.664635
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 723.6168
+Random config interference: 161.05975
+Custom config interference: 122.664635
+######################################################
+Tempo total : 51.607
+######################################################
+global_interf: 116.66644
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 714.8943
+Random config interference: 142.99641
+Custom config interference: 116.66644
+######################################################
+Tempo total : 51.842
+######################################################
+global_interf: 114.73476
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 709.6466
+Random config interference: 144.23628
+Custom config interference: 114.73476
+######################################################
+Tempo total : 53.117
+######################################################
+global_interf: 116.238174
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 727.26715
+Random config interference: 148.04495
+Custom config interference: 116.238174
+######################################################
+Tempo total : 50.068
+######################################################
+global_interf: 120.46692
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 715.6052
+Random config interference: 150.86588
+Custom config interference: 120.46692
+######################################################
+Tempo total : 49.782
+######################################################
+global_interf: 117.82531
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 724.4681
+Random config interference: 153.06586
+Custom config interference: 117.82531
+######################################################
+Tempo total : 49.175
+######################################################
+global_interf: 121.00863
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 735.2094
+Random config interference: 167.52287
+Custom config interference: 121.00863
+######################################################
+Tempo total : 49.303
+######################################################
+global_interf: 124.13065
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 722.7936
+Random config interference: 162.05829
+Custom config interference: 124.13065
+######################################################
+Tempo total : 49.331
+######################################################
+global_interf: 112.90165
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 709.4183
+Random config interference: 159.23555
+Custom config interference: 112.90165
+######################################################
+Tempo total : 49.568
+######################################################
+global_interf: 114.37637
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 725.88086
+Random config interference: 147.08878
+Custom config interference: 114.37637
+######################################################
+Tempo total : 49.931
+######################################################
+global_interf: 119.02535
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 726.5085
+Random config interference: 148.67355
+Custom config interference: 119.02535
+######################################################
+Tempo total : 50.254
+######################################################
+global_interf: 130.06241
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 734.3513
+Random config interference: 168.5845
+Custom config interference: 130.06241
+######################################################
+Tempo total : 50.167
+######################################################
+global_interf: 115.012794
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 718.88025
+Random config interference: 180.60393
+Custom config interference: 115.012794
+######################################################
+Tempo total : 50.974
+######################################################
+global_interf: 123.930275
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 725.01715
+Random config interference: 157.95078
+Custom config interference: 123.930275
+######################################################
+Tempo total : 50.695
+######################################################
+global_interf: 115.86551
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 712.7652
+Random config interference: 165.8299
+Custom config interference: 115.86551
+######################################################
+Tempo total : 51.332
+######################################################
+global_interf: 112.43905
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 716.09875
+Random config interference: 137.28229
+Custom config interference: 112.43905
+######################################################
+Tempo total : 50.788
+######################################################
+global_interf: 114.14835
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 709.88385
+Random config interference: 193.79579
+Custom config interference: 114.14835
+######################################################
+Tempo total : 51.506
+######################################################
+global_interf: 123.756584
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 746.2961
+Random config interference: 155.52946
+Custom config interference: 123.756584
+######################################################
+Tempo total : 51.487
+######################################################
+global_interf: 119.78778
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 300
+Amount Wi-Fi Dev: 120
+Amount Zigbee Dev: 150
+Amount Bluetooth Dev: 30
+Same config interference: 717.3635
+Random config interference: 161.85204
+Custom config interference: 119.78778
+######################################################
+Tempo total : 69.706
+######################################################
+global_interf: 203.97868
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1287.7953
+Random config interference: 321.41812
+Custom config interference: 203.97868
+######################################################
+Tempo total : 68.635
+######################################################
+global_interf: 216.06425
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1277.8221
+Random config interference: 346.71646
+Custom config interference: 216.06425
+######################################################
+Tempo total : 67.014
+######################################################
+global_interf: 211.4462
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1276.368
+Random config interference: 260.1813
+Custom config interference: 211.4462
+######################################################
+Tempo total : 66.82
+######################################################
+global_interf: 218.713
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1301.603
+Random config interference: 348.57693
+Custom config interference: 218.713
+######################################################
+Tempo total : 66.679
+######################################################
+global_interf: 215.3222
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1272.4286
+Random config interference: 280.78882
+Custom config interference: 215.3222
+######################################################
+Tempo total : 66.648
+######################################################
+global_interf: 222.17226
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1295.3022
+Random config interference: 286.68207
+Custom config interference: 222.17226
+######################################################
+Tempo total : 66.782
+######################################################
+global_interf: 212.36188
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1286.0154
+Random config interference: 290.36188
+Custom config interference: 212.36188
+######################################################
+Tempo total : 67.897
+######################################################
+global_interf: 221.40729
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1273.777
+Random config interference: 304.01987
+Custom config interference: 221.40729
+######################################################
+Tempo total : 67.511
+######################################################
+global_interf: 219.85153
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1283.7538
+Random config interference: 277.95172
+Custom config interference: 219.85153
+######################################################
+Tempo total : 67.136
+######################################################
+global_interf: 204.07108
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1274.808
+Random config interference: 288.49326
+Custom config interference: 204.07108
+######################################################
+Tempo total : 67.683
+######################################################
+global_interf: 216.31233
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1277.9305
+Random config interference: 301.19318
+Custom config interference: 216.31233
+######################################################
+Tempo total : 68.283
+######################################################
+global_interf: 213.57224
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1291.7806
+Random config interference: 290.47708
+Custom config interference: 213.57224
+######################################################
+Tempo total : 68.242
+######################################################
+global_interf: 214.1713
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1272.653
+Random config interference: 265.16522
+Custom config interference: 214.1713
+######################################################
+Tempo total : 67.157
+######################################################
+global_interf: 209.9551
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1277.5038
+Random config interference: 267.63153
+Custom config interference: 209.9551
+######################################################
+Tempo total : 66.696
+######################################################
+global_interf: 205.37788
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1259.8501
+Random config interference: 263.23074
+Custom config interference: 205.37788
+######################################################
+Tempo total : 68.385
+######################################################
+global_interf: 215.22966
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1310.5974
+Random config interference: 279.7701
+Custom config interference: 215.22966
+######################################################
+Tempo total : 66.942
+######################################################
+global_interf: 211.74568
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1278.3549
+Random config interference: 269.52307
+Custom config interference: 211.74568
+######################################################
+Tempo total : 66.203
+######################################################
+global_interf: 215.65181
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1293.2234
+Random config interference: 297.8922
+Custom config interference: 215.65181
+######################################################
+Tempo total : 65.949
+######################################################
+global_interf: 223.68663
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1281.8961
+Random config interference: 318.267
+Custom config interference: 223.68663
+######################################################
+Tempo total : 66.115
+######################################################
+global_interf: 221.48816
+Amount of APs: 30
+Amount Wi-Fi AP: 10
+Amount Zigbee AP: 10
+Amount Bluetooth AP: 10
+Amount of Devices: 400
+Amount Wi-Fi Dev: 160
+Amount Zigbee Dev: 200
+Amount Bluetooth Dev: 40
+Same config interference: 1294.4736
+Random config interference: 283.85275
+Custom config interference: 221.48816

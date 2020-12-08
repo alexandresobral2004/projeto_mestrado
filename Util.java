@@ -1,3 +1,4 @@
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -33,9 +34,9 @@ public class Util{
         else {
           AP ap1 = (AP) node1;
           AP ap2 = (AP) node2;
+         
           distance = (float) Math.pow((
-            Math.pow((ap1.getX() - ap2.getX()), 2) +
-            Math.pow((ap1.getY() - ap2.getY()), 2)),
+            Math.pow((ap1.getX() - ap2.getX()), 2) + Math.pow((ap1.getY() - ap2.getY()), 2)),
           0.5);
         }
         return distance;
@@ -79,21 +80,25 @@ public class Util{
         float pl = 1.0f;
         if (0.5f < distance && distance <= 8.0f)
           pl = 40.2f + (20.0f * (float) Math.log10(distance));
-        if (distance > 8.0f)
+        else if (distance > 8.0f)
           pl = 58.5f + 33.0f * ((float) Math.log10((distance / 8.0f)));
         return pl;
       }
 
       public float getNormalizedInterference(AP ap1, int ap1Channel,
-                                             AP ap2, int ap2Channel) {
+                                            AP ap2, int ap2Channel) {
+     
         float antennaPower,
               antennaPowerDBM,
               pathLoss,
               interferenceFactor,
               distance,
-              interference;
+              interference = 0.0f;
 
         distance = getDistance(ap1, ap2);
+       if(distance <= 100.00f) {
+      
+        
         interferenceFactor = getInterferenceFactor(ap1Channel, ap2Channel);
 
         antennaPowerDBM = getAntennaPowerFromAP(ap2);
@@ -101,12 +106,17 @@ public class Util{
         antennaPower = getAntennaPowerNormalization(antennaPowerDBM);
 
         pathLoss = getPathLoss(distance);
-
+       
         interference = antennaPower * interferenceFactor / pathLoss;
-
+       
+        
+       }
+        else {
+        	interference = 0.0f;
+        }
         if (ap1.equals(ap2))
-          interference = 0.0f;
-
+            interference = 0.0f;
+        
         return interference;
       }
 
@@ -117,9 +127,12 @@ public class Util{
               pathLoss,
               interferenceFactor,
               distance,
-              interference;
+              interference = 0.0f;
 
         distance = getDistance(device1, device2);
+        if (distance < 100.0f) {
+        	
+        
         interferenceFactor = getInterferenceFactor(device1Channel, device2Channel);
 
         antennaPowerDBM = getAntennaPowerFromDevice(device2);
@@ -127,8 +140,13 @@ public class Util{
         antennaPower = getAntennaPowerNormalization(antennaPowerDBM);
 
         pathLoss = getPathLoss(distance);
-
+       
         interference = antennaPower * interferenceFactor / pathLoss;
+        }
+        else {
+        	interference = 0.0f;
+        }
+       
 
         if (device1.equals(device2))
           interference = 0.0f;

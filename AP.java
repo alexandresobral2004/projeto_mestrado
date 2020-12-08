@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Set;
 
-import org.jamesframework.core.problems.datatypes.IntegerIdentifiedData;
+// import org.jamesframework.core.problems.datatypes.IntegerIdentifiedData;
 
 public class AP {
 	private int id;
