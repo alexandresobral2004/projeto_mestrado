@@ -30,7 +30,7 @@ public class SimulationSetup{
                                                              accessPointManager,
                                                              util);
             
-            	env.setInterferences(assigner.getMitigaterInterference());
+            	env.setInterferences(assigner.channelOverlappingAvoidance());
             	/*  if(retorno!=null) {
                   this.wc.salva2(retorno);
                 }

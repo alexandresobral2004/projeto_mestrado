@@ -788,7 +788,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 	}
 
-	public ArrayList<Float> getMitigaterInterference() {
+	public ArrayList<Float> channelOverlappingAvoidance() {
 		final long start = System.currentTimeMillis();
 
 		ArrayList<AP> APs = this.env.getAPs();
