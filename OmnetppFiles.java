@@ -150,6 +150,7 @@ public class OmnetppFiles {
 		str += "description = \"Wireless smarthome scenario\"\n";
 		str += "network = smarthome_network\n";
 		str += "sim-time-limit = 10s\n";
+		str += "#CENÁRIO ALEXANDRE";
 		str += "\n";
 		str += "#--------------------------------------------------------------------------------\n";
 		str += "# Configuring visualizer\n";
