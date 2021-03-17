@@ -1,4 +1,3 @@
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -96,7 +95,7 @@ public class Util{
               interference = 0.0f;
 
         distance = getDistance(ap1, ap2);
-       //if(distance <= 200.00f) {
+      
       
         
         interferenceFactor = getInterferenceFactor(ap1Channel, ap2Channel);
@@ -110,10 +109,7 @@ public class Util{
         interference = antennaPower * interferenceFactor / pathLoss;
        
         
-//       }
-//        else {
-//        	interference = 0.0f;
-//        }
+
         if (ap1.equals(ap2))
             interference = 0.0f;
         
@@ -130,8 +126,7 @@ public class Util{
               interference = 0.0f;
 
         distance = getDistance(device1, device2);
-       // if (distance < 100.0f) {
-        	
+      
         
         interferenceFactor = getInterferenceFactor(device1Channel, device2Channel);
 
@@ -142,11 +137,7 @@ public class Util{
         pathLoss = getPathLoss(distance);
        
         interference = antennaPower * interferenceFactor / pathLoss;
-//        }
-//        else {
-//        	interference = 0.0f;
-//        }
-//       
+  
 
         if (device1.equals(device2))
           interference = 0.0f;

@@ -258,24 +258,24 @@ public class OmnetppFiles {
 					i++;
 				}
 			}
-			if (this.env.getHowManyBluetoothDevices() > 0) {
-				str += "\n";
-				str += "#Device_Bluetooth\n";
-				str += "*.hostDevice_Bluetooth[*].mobility.typename = \"LinearMobility\"\n";
-				str += "*.hostDevice_Bluetooth[*].mobility.initFromDisplayString = false\n";
-				str += "*.hostDevice_Bluetooth[*].mobility.speed = 0mps\n";
-				str += "*.hostDevice_Bluetooth[*].mobility.initialZ = 1.7m\n";
-				str += "\n";
-
-				i = 0;
-				for(Device dev : this.env.getBluetoothDevs()) {
-					str += "\n";
-					str += "# Device_Bluetooth[" + i + "]\n";
-					str += "*.hostDevice_Bluetooth[" + i + "].mobility.initialX = " + dev.getX() + "m\n";
-					str += "*.hostDevice_Bluetooth[" + i + "].mobility.initialY = " + dev.getY() + "m\n";
-					i++;
-				}
-			}
+//			if (this.env.getHowManyBluetoothDevices() > 0) {
+//				str += "\n";
+//				str += "#Device_Bluetooth\n";
+//				str += "*.hostDevice_Bluetooth[*].mobility.typename = \"LinearMobility\"\n";
+//				str += "*.hostDevice_Bluetooth[*].mobility.initFromDisplayString = false\n";
+//				str += "*.hostDevice_Bluetooth[*].mobility.speed = 0mps\n";
+//				str += "*.hostDevice_Bluetooth[*].mobility.initialZ = 1.7m\n";
+//				str += "\n";
+//
+//				i = 0;
+//				for(Device dev : this.env.getBluetoothDevs()) {
+//					str += "\n";
+//					str += "# Device_Bluetooth[" + i + "]\n";
+//					str += "*.hostDevice_Bluetooth[" + i + "].mobility.initialX = " + dev.getX() + "m\n";
+//					str += "*.hostDevice_Bluetooth[" + i + "].mobility.initialY = " + dev.getY() + "m\n";
+//					i++;
+//				}
+//			}
 		}
 		str += "\n";
 		str += "#--------------------------------------------------------------------------------\n";
@@ -294,11 +294,11 @@ public class OmnetppFiles {
 			str += "*.hostAP_Zigbee[*].wlan[*].radio.transmitter.power = 1mW\n";
 			str += "*.hostAP_Zigbee[*].wlan[*].radio.bandName = \"ZigbeeBand\"\n";
 			str += "\n";
-			str += "# AP_Bluetooth\n";
-			str += "\n";
-			str += "*.hostAP_Bluetooth[*].wlan[*].radio.bandwidth = 1MHz\n";
-			str += "*.hostAP_Bluetooth[*].wlan[*].radio.transmitter.power = 1mW\n";
-			str += "*.hostAP_Bluetooth[*].wlan[*].radio.bandName = \"BluetoothBand\"\n";
+//			str += "# AP_Bluetooth\n";
+//			str += "\n";
+//			str += "*.hostAP_Bluetooth[*].wlan[*].radio.bandwidth = 1MHz\n";
+//			str += "*.hostAP_Bluetooth[*].wlan[*].radio.transmitter.power = 1mW\n";
+//			str += "*.hostAP_Bluetooth[*].wlan[*].radio.bandName = \"BluetoothBand\"\n";
 		}
 		if (this.env.getHowManyWifiDevices() > 0) {
 			str += "\n";
@@ -316,14 +316,14 @@ public class OmnetppFiles {
 			str += "*.hostDevice_Zigbee[*].wlan[*].radio.transmitter.power = 1mW\n";
 			str += "*.hostDevice_Zigbee[*].wlan[*].radio.bandName = \"ZigbeeBand\"\n";
 		}
-		if (this.env.getHowManyBluetoothDevices() > 0) {
-			str += "\n";
-			str += "#Device_Bluetooth\n";
-			str += "\n";
-			str += "*.hostDevice_Bluetooth[*].wlan[*].radio.bandwidth = 1MHz\n";
-			str += "*.hostDevice_Bluetooth[*].wlan[*].radio.transmitter.power = 1mW\n";
-			str += "*.hostDevice_Bluetooth[*].wlan[*].radio.bandName = \"BluetoothBand\"\n";
-		}
+//		if (this.env.getHowManyBluetoothDevices() > 0) {
+//			str += "\n";
+//			str += "#Device_Bluetooth\n";
+//			str += "\n";
+//			str += "*.hostDevice_Bluetooth[*].wlan[*].radio.bandwidth = 1MHz\n";
+//			str += "*.hostDevice_Bluetooth[*].wlan[*].radio.transmitter.power = 1mW\n";
+//			str += "*.hostDevice_Bluetooth[*].wlan[*].radio.bandName = \"BluetoothBand\"\n";
+//		}
 		str += "\n";
 		str += "#--------------------------------------------------------------------------------\n";
 		str += "# Configuring devices applications\n";
@@ -390,22 +390,22 @@ public class OmnetppFiles {
 
 				deviceZigbee++;
 			}
-			if(dev.getType().equals(DeviceType.BLUETOOTH)) {
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth
-						+ "].app[0].destAddresses = \"hostAP_Bluetooth[" + dev.getConnectedAPId() / 3
-						+ "]\"\n";
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
-						+ deviceBluetooth + "]-\"\n";
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = 0\n";
-
-				deviceBluetooth++;
-			}
+//			if(dev.getType().equals(DeviceType.BLUETOOTH)) {
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth
+//						+ "].app[0].destAddresses = \"hostAP_Bluetooth[" + dev.getConnectedAPId() / 3
+//						+ "]\"\n";
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
+//						+ deviceBluetooth + "]-\"\n";
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = 0\n";
+//
+//				deviceBluetooth++;
+//			}
 		}
 
 		strIni += "#AP channels\n";
 		strIni += "*.hostAP_Wifi[*].wlan[*].radio.channelNumber = 0\n";
 		strIni += "*.hostAP_Zigbee[*].wlan[*].radio.channelNumber = 0\n";
-		strIni += "*.hostAP_Bluetooth[*].wlan[*].radio.channelNumber = 0\n";
+//		strIni += "*.hostAP_Bluetooth[*].wlan[*].radio.channelNumber = 0\n";
 
     for(Device device: sameConfig){
       device.setChannel(0);
@@ -487,17 +487,17 @@ public class OmnetppFiles {
 						+ (auxAP.getChannel() - 13) + "\n";
 
 				deviceZigbee++;
-			}
-			if(dev.getType().equals(DeviceType.BLUETOOTH)) {
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth
-						+ "].app[0].destAddresses = \"hostAP_Bluetooth[" + dev.getConnectedAPId() / 3
-						+ "]\"\n";
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
-						+ deviceBluetooth + "]-\"\n";
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = "
-						+ (auxAP.getChannel() - 29) + "\n";
-
-				deviceBluetooth++;
+//			}
+//			if(dev.getType().equals(DeviceType.BLUETOOTH)) {
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth
+//						+ "].app[0].destAddresses = \"hostAP_Bluetooth[" + dev.getConnectedAPId() / 3
+//						+ "]\"\n";
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
+//						+ deviceBluetooth + "]-\"\n";
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = "
+//						+ (auxAP.getChannel() - 29) + "\n";
+//
+//				deviceBluetooth++;
       }
 		}
 
@@ -517,7 +517,7 @@ public class OmnetppFiles {
 				strIni += "*.hostAP_Zigbee[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 13) + "\n";
 			}
 			if (apID % 3 == 2) { // Bluetooth AP
-				strIni += "*.hostAP_Bluetooth[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 29) + "\n";
+				//strIni += "*.hostAP_Bluetooth[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 29) + "\n";
 			}
 			apID++;
     }
@@ -570,15 +570,15 @@ public class OmnetppFiles {
 				deviceZigbee++;
 			}
 			if(dev.getType().equals(DeviceType.BLUETOOTH)) {
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth
-						+ "].app[0].destAddresses = \"hostAP_Bluetooth[" + dev.getConnectedAPId() / 3
-						+ "]\"\n";
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
-						+ deviceBluetooth + "]-\"\n";
-				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = "
-						+ (dev.getChannel() - 29) + "\n";
-
-				deviceBluetooth++;
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth
+//						+ "].app[0].destAddresses = \"hostAP_Bluetooth[" + dev.getConnectedAPId() / 3
+//						+ "]\"\n";
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].app[0].packetName = \"Bluetooth_Device["
+//						+ deviceBluetooth + "]-\"\n";
+//				strIni += "*.hostDevice_Bluetooth[" + deviceBluetooth + "].wlan[*].radio.channelNumber = "
+//						+ (dev.getChannel() - 29) + "\n";
+//
+//				deviceBluetooth++;
       }
 		}
 
@@ -598,7 +598,7 @@ public class OmnetppFiles {
 				strIni += "*.hostAP_Zigbee[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 13) + "\n";
 			}
 			if (apID % 3 == 2) { // Bluetooth AP
-				strIni += "*.hostAP_Bluetooth[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 29) + "\n";
+				//strIni += "*.hostAP_Bluetooth[" + apID / 3 + "].wlan[*].radio.channelNumber = " + (ap.getChannel() - 29) + "\n";
 			}
 			apID++;
     }
@@ -647,10 +647,10 @@ public class OmnetppFiles {
 		strNed += "        parameters:\n";
 		strNed += "          @display(\"p=0,0;i=device/accesspoint\");\n";
 		strNed += "      }\n";
-		strNed += "      hostAP_Bluetooth[numAP]: AdhocHost {\n";
-		strNed += "        parameters:\n";
-		strNed += "          @display(\"p=0,0;i=device/accesspoint\");\n";
-		strNed += "      }\n";
+//		strNed += "      hostAP_Bluetooth[numAP]: AdhocHost {\n";
+//		strNed += "        parameters:\n";
+//		strNed += "          @display(\"p=0,0;i=device/accesspoint\");\n";
+//		strNed += "      }\n";
 		if (this.env.getHowManyWifiDevices() > 0) {
 			strNed += "      hostDevice_Wifi[numDeviceWifi]: AdhocHost {\n";
 			strNed += "        parameters:\n";
@@ -664,10 +664,10 @@ public class OmnetppFiles {
 			strNed += "      }\n";
 		}
 		if (this.env.getHowManyBluetoothDevices() > 0) {
-			strNed += "      hostDevice_Bluetooth[numDeviceBluetooth]: AdhocHost {\n";
-			strNed += "        parameters:\n";
-			strNed += "          @display(\"p=0,0;i=device/wifilaptop\");\n";
-			strNed += "      }\n";
+//			strNed += "      hostDevice_Bluetooth[numDeviceBluetooth]: AdhocHost {\n";
+//			strNed += "        parameters:\n";
+//			strNed += "          @display(\"p=0,0;i=device/wifilaptop\");\n";
+//			strNed += "      }\n";
 		}
 		strNed += "}\n";
 	}

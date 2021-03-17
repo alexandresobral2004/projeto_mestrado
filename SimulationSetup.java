@@ -8,7 +8,7 @@ public class SimulationSetup{
     CreateTable table = new CreateTable("tabela-w.txt");
     Util util = new Util(table.getW());
     PositionerInterface positioner = new Positioner(util);
-    WriteConsole wc = new WriteConsole();
+    //WriteConsole wc = new WriteConsole();
 
     SimulationSetup(final int rep, final int[] aps_scenario, final int[] devices_scenario){
         this.aps_scenario = aps_scenario;

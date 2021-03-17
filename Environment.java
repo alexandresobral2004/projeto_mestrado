@@ -55,219 +55,219 @@ public class Environment {
 	 * @param ap
 	 * @return
 	 * @throws ArrayIndexOutOfBoundsException
-	 */
-	public ArrayList<AP> changeLocation(ArrayList<AP> ap) throws ArrayIndexOutOfBoundsException {
-
-		int[] x_location = { 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 175, 190, 205, 220, 235, 250, 265,280, 295,310,325,340,355,370,385,400 };
-		int[] y_location = { 0, 35 , 70, 95, 130, 165, 195, 230, 265, 300, 335, 370, 400 };
-		//CANAIS WF,ZB
-		
-		int temp_y = 0;
-	//	int max_tempY=y_location.length;
-		int temp_x = 0;
-//		int max_tempX=x_location.length;
-		int ch=0;
-		
-		
-		
-	
-		int[] canal = {1,16,11,11,6,22,1,18,6,23,11,17,1,19,11,17,1,20,6,24,11,26};
-		
-		//int[] canal2 = {11,26,6,24,1,20,11,17,1,19,11,17,6,23,1,18,6,22,11,11,1,16};
-		
-		for (int x = 0; x < ap.size(); x++) {
-
-			for (int z = 0; z < ap.size(); z++) {
-				try {	
-				if ((ap.get(x).getType().toString() == "WIFI") && (ap.get(z).getType().toString() == "ZIGBEE")) {
-					
-			
-				//	if (x_location[temp_x] <= 355 && y_location[temp_y] < 400 && temp_x <=max_tempX && temp_y  <= max_tempY) {
-					 if ( temp_x < 26 && temp_y < 13 ) {
-					
-					
-					
-						// WF
-						ap.get(x).setX(x_location[temp_x]);
-						
-						ap.get(x).setY(y_location[temp_y]);
-					
-
-						// ZB
-
-						ap.get(z).setX(x_location[temp_x + 1]);
-						
-
-						ap.get(z).setY(y_location[temp_y]);
-					
-
-						// INCREMENTA O temp_x
-						temp_x += 2;
-						
-							   //ATRIBUI CANAIS
-								if(canal[ch+1] < 24 && ap.get(x)!= null && ap.get(z)!= null) {
-								
-								//ARIBUI CANAL WIFI E  IMPRIME LOCAL E CANAL
-								ap.get(x).setChannel(setChannelWifi(canal[ch]));
-								
-								System.out.println(+x_location[temp_x] + "; "+y_location[temp_y]+ "; w"+ canal[ch] );
-									
-								 
-								//ATRIBUI CANAL ZIGBEE  IMPRIME LOCAL E CANAL
-								 ap.get(z).setChannel(setChannelZigBee(canal[ch+1]));
-								 System.out.println(+x_location[temp_x + 1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
-								 
-								
-								
-								//incrementa canais
-								 ch+=2;
-								}
-								
-								
-								//QUANDO CHEGA NO PENÚLTIMO CANAL ENTRA AQUI, ZERA O ch E SETA OS ÚLTIMOS CANAIS NOS 2 DEVICES
-								else if (canal[ch+1] >= 24 && ap.get(x)!= null && ap.get(z)!= null ){
-									
-									 ap.get(x).setChannel(setChannelWifi(canal[ch] = 11));
-									
-									 System.out.println(+x_location[temp_x]+ "; "+y_location[temp_y] + "; w"+canal[ch]);
-									 
-									 ap.get(z).setChannel(setChannelZigBee(canal[ch+1] = 26));
-									
-									 
-									 System.out.println(+x_location[temp_x+1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
-									 
-									 ch = 0;
-									 
-								}
-								
-						
-
-					}
-
-					else {
-						
-					//	temp_x < 26 && temp_y < 13 
-						
-						if(temp_x == 26) {
-							temp_x = 0;
-						}
-
-						if ( temp_y == 13) {
-							temp_y = 0;
-							
-						}
-						temp_y += 1;// QUANDO X CHEGA A 400 INCREMENTA O Y
-						
-
-					}
-
-				} else if ((ap.get(x).getType().toString() == "ZIGBEE") && (ap.get(z).getType().toString() == "WIFI") ) {
-					
-					//if (x_location[temp_x] <= 355 && y_location[temp_y] < 400  ) {
-					  if( temp_x < 26 && temp_y < 13) {
-						
-					
-						// ZB
-
-						ap.get(x).setX(x_location[temp_x+1]);
-					
-						
-						ap.get(x).setY(y_location[temp_y]);
-					
-					//	System.out.println(+x_location[temp_x+1] + "; "+y_location[temp_y] );
-
-						
-						// WF
-						ap.get(z).setX(x_location[temp_x]);
-					
-
-						ap.get(z).setX(y_location[temp_y]);
-				   
-
-
-						// INCREMENTA O temp_x + 2 pra ele pular a casa do zigbee // wifi
-						temp_x += 2;
-						
-						
-						// INCREMENTA O temp_x
-						
-						//ATRIBUI CANAL WIFI
-						if(canal[ch+1] < 24 && ap.get(x)!= null && ap.get(z)!= null ) {
-						 ap.get(z).setChannel(setChannelWifi(canal[ch]));
-						// System.out.println(canal2[ch]);
-						System.out.println(+x_location[temp_x] + ";  "+y_location[temp_y]+ "; w"+ canal[ch] );
-						 
-						//ATRIBUI CANAL ZIGBEE
-						 ap.get(x).setChannel(setChannelZigBee(canal[ch+1]));
-						// System.out.println(canal2[ch+1]);
-						 System.out.println(+x_location[temp_x + 1]+ ";  "+y_location[temp_y] + "; z"+canal[ch+1]);
-						 
-					
-						
-						 
-						 ch+=2;
-						 
-						}
-						
-						//QUANDO CHEGA NO PENÚLTIMO CANAL ENTRA AQUI, ZERA O ch E SETA OS ÚLTIMOS CANAIS NOS 2 DEVICES
-						else if (canal[ch+1] >= 24  && ap.get(x)!= null && ap.get(z)!= null ){
-							
-							 ap.get(x).setChannel(setChannelWifi(canal[ch] = 11));
-							 
-							 System.out.println(+x_location[temp_x]+ "; "+y_location[temp_y] + "; w"+canal[ch]);
-							 
-							 
-							 ap.get(x).setChannel(setChannelZigBee(canal[ch+1] = 26));
-							 System.out.println(+x_location[temp_x+1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
-							 ch = 0;
-							 
-						}
-						
-						
-						
-						
-						
-						//################ TRATA OS CANAIS ##############################
-					
-				
-					   // #########################################################################
-
-
-					}
-
-					else {
-
-						 
-
-						if(temp_x == 26) {
-							temp_x = 0;
-						}
-
-						if ( temp_y == 13) {
-							temp_y = 0;
-							
-						}
-						temp_y += 1;// QUANDO X CHEGA A 400 INCREMENTA O Y
-
-					}
-				}
-				}
-				catch (Exception exception) {
-					System.out.println("ERRO :"+exception);
-					
-				
-				
-				}
-
-
-
-			}
-			devicesManager.fillDevicesInfo(getDevices());
-		}
-	
-		return ap;
-
-	}
+//	 */
+//	public ArrayList<AP> changeLocation(ArrayList<AP> ap) throws ArrayIndexOutOfBoundsException {
+//
+//		int[] x_location = { 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 175, 190, 205, 220, 235, 250, 265,280, 295,310,325,340,355,370,385,400 };
+//		int[] y_location = { 0, 35 , 70, 95, 130, 165, 195, 230, 265, 300, 335, 370, 400 };
+//		//CANAIS WF,ZB
+//		
+//		int temp_y = 0;
+//	//	int max_tempY=y_location.length;
+//		int temp_x = 0;
+////		int max_tempX=x_location.length;
+//		int ch=0;
+//		
+//		
+//		
+//	
+//		int[] canal = {1,16,11,11,6,22,1,18,6,23,11,17,1,19,11,17,1,20,6,24,11,26};
+//		
+//		//int[] canal2 = {11,26,6,24,1,20,11,17,1,19,11,17,6,23,1,18,6,22,11,11,1,16};
+//		
+//		for (int x = 0; x < ap.size(); x++) {
+//
+//			for (int z = 0; z < ap.size(); z++) {
+//				try {	
+//				if ((ap.get(x).getType().toString() == "WIFI") && (ap.get(z).getType().toString() == "ZIGBEE")) {
+//					
+//			
+//				//	if (x_location[temp_x] <= 355 && y_location[temp_y] < 400 && temp_x <=max_tempX && temp_y  <= max_tempY) {
+//					 if ( temp_x < 26 && temp_y < 13 ) {
+//					
+//					
+//					
+//						// WF
+//						ap.get(x).setX(x_location[temp_x]);
+//						
+//						ap.get(x).setY(y_location[temp_y]);
+//					
+//
+//						// ZB
+//
+//						ap.get(z).setX(x_location[temp_x + 1]);
+//						
+//
+//						ap.get(z).setY(y_location[temp_y]);
+//					
+//
+//						// INCREMENTA O temp_x
+//						temp_x += 2;
+//						
+//							   //ATRIBUI CANAIS
+//								if(canal[ch+1] < 24 && ap.get(x)!= null && ap.get(z)!= null) {
+//								
+//								//ARIBUI CANAL WIFI E  IMPRIME LOCAL E CANAL
+//								ap.get(x).setChannel(setChannelWifi(canal[ch]));
+//								
+//								System.out.println(+x_location[temp_x] + "; "+y_location[temp_y]+ "; w"+ canal[ch] );
+//									
+//								 
+//								//ATRIBUI CANAL ZIGBEE  IMPRIME LOCAL E CANAL
+//								 ap.get(z).setChannel(setChannelZigBee(canal[ch+1]));
+//								 System.out.println(+x_location[temp_x + 1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
+//								 
+//								
+//								
+//								//incrementa canais
+//								 ch+=2;
+//								}
+//								
+//								
+//								//QUANDO CHEGA NO PENÚLTIMO CANAL ENTRA AQUI, ZERA O ch E SETA OS ÚLTIMOS CANAIS NOS 2 DEVICES
+//								else if (canal[ch+1] >= 24 && ap.get(x)!= null && ap.get(z)!= null ){
+//									
+//									 ap.get(x).setChannel(setChannelWifi(canal[ch] = 11));
+//									
+//									 System.out.println(+x_location[temp_x]+ "; "+y_location[temp_y] + "; w"+canal[ch]);
+//									 
+//									 ap.get(z).setChannel(setChannelZigBee(canal[ch+1] = 26));
+//									
+//									 
+//									 System.out.println(+x_location[temp_x+1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
+//									 
+//									 ch = 0;
+//									 
+//								}
+//								
+//						
+//
+//					}
+//
+//					else {
+//						
+//					//	temp_x < 26 && temp_y < 13 
+//						
+//						if(temp_x == 26) {
+//							temp_x = 0;
+//						}
+//
+//						if ( temp_y == 13) {
+//							temp_y = 0;
+//							
+//						}
+//						temp_y += 1;// QUANDO X CHEGA A 400 INCREMENTA O Y
+//						
+//
+//					}
+//
+//				} else if ((ap.get(x).getType().toString() == "ZIGBEE") && (ap.get(z).getType().toString() == "WIFI") ) {
+//					
+//					//if (x_location[temp_x] <= 355 && y_location[temp_y] < 400  ) {
+//					  if( temp_x < 26 && temp_y < 13) {
+//						
+//					
+//						// ZB
+//
+//						ap.get(x).setX(x_location[temp_x+1]);
+//					
+//						
+//						ap.get(x).setY(y_location[temp_y]);
+//					
+//					//	System.out.println(+x_location[temp_x+1] + "; "+y_location[temp_y] );
+//
+//						
+//						// WF
+//						ap.get(z).setX(x_location[temp_x]);
+//					
+//
+//						ap.get(z).setX(y_location[temp_y]);
+//				   
+//
+//
+//						// INCREMENTA O temp_x + 2 pra ele pular a casa do zigbee // wifi
+//						temp_x += 2;
+//						
+//						
+//						// INCREMENTA O temp_x
+//						
+//						//ATRIBUI CANAL WIFI
+//						if(canal[ch+1] < 24 && ap.get(x)!= null && ap.get(z)!= null ) {
+//						 ap.get(z).setChannel(setChannelWifi(canal[ch]));
+//						// System.out.println(canal2[ch]);
+//						System.out.println(+x_location[temp_x] + ";  "+y_location[temp_y]+ "; w"+ canal[ch] );
+//						 
+//						//ATRIBUI CANAL ZIGBEE
+//						 ap.get(x).setChannel(setChannelZigBee(canal[ch+1]));
+//						// System.out.println(canal2[ch+1]);
+//						 System.out.println(+x_location[temp_x + 1]+ ";  "+y_location[temp_y] + "; z"+canal[ch+1]);
+//						 
+//					
+//						
+//						 
+//						 ch+=2;
+//						 
+//						}
+//						
+//						//QUANDO CHEGA NO PENÚLTIMO CANAL ENTRA AQUI, ZERA O ch E SETA OS ÚLTIMOS CANAIS NOS 2 DEVICES
+//						else if (canal[ch+1] >= 24  && ap.get(x)!= null && ap.get(z)!= null ){
+//							
+//							 ap.get(x).setChannel(setChannelWifi(canal[ch] = 11));
+//							 
+//							 System.out.println(+x_location[temp_x]+ "; "+y_location[temp_y] + "; w"+canal[ch]);
+//							 
+//							 
+//							 ap.get(x).setChannel(setChannelZigBee(canal[ch+1] = 26));
+//							 System.out.println(+x_location[temp_x+1]+ "; "+y_location[temp_y] + "; z"+canal[ch+1]);
+//							 ch = 0;
+//							 
+//						}
+//						
+//						
+//						
+//						
+//						
+//						//################ TRATA OS CANAIS ##############################
+//					
+//				
+//					   // #########################################################################
+//
+//
+//					}
+//
+//					else {
+//
+//						 
+//
+//						if(temp_x == 26) {
+//							temp_x = 0;
+//						}
+//
+//						if ( temp_y == 13) {
+//							temp_y = 0;
+//							
+//						}
+//						temp_y += 1;// QUANDO X CHEGA A 400 INCREMENTA O Y
+//
+//					}
+//				}
+//				}
+//				catch (Exception exception) {
+//					System.out.println("ERRO :"+exception);
+//					
+//				
+//				
+//				}
+//
+//
+//
+//			}
+//			devicesManager.fillDevicesInfo(getDevices());
+//		}
+//	
+//		return ap;
+//
+//	}
 	
 	
 	
@@ -463,7 +463,7 @@ public class Environment {
     accessPoints = accessPointsManager.addAP(accessPoints);
     initWifiAPs();
     initZigbeeAPs();
-    initBluetoothAPs();
+    //initBluetoothAPs();
   }
 
   public void setDevices(){
@@ -487,12 +487,12 @@ public class Environment {
     }
   }
 
-  public void initBluetoothAPs() {
-    for (AP ap : accessPoints) {
-      if (ap.getType() == DeviceType.BLUETOOTH)
-        bluetoothAPs.add(ap);
-    }
-  }
+//  public void initBluetoothAPs() {
+//    for (AP ap : accessPoints) {
+//      if (ap.getType() == DeviceType.BLUETOOTH)
+//        bluetoothAPs.add(ap);
+//    }
+//  }
 
   public void initWifiDevs() {
     for (Device device : devices) {
