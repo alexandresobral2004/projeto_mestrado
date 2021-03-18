@@ -94,7 +94,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 			if (inter_factor < best_interf) {
 				best_interf = inter_factor;
 				best_ch = z;
-				break;
+
 			}
 //			else {
 //				ap.setChannel(best_ch);
@@ -121,7 +121,6 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 			if (inter_factor < best_interf) {
 				best_interf = inter_factor;
 				best_ch = x;
-				break;
 
 			}
 
@@ -149,9 +148,9 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 		float interf_local = 0;
 		float interferencia = 0.0f;
 
-//		for (int u = 0; u < (this.env.getDevices().size()); u++) {
-//			util.generateAPsRandomChannels(env.getAPs());
-//			best_interf = util.getAPsInterference(this.env.getAPs());
+		for (int u = 0; u < (this.env.getDevices().size()); u++) {
+			util.generateAPsRandomChannels(env.getAPs());
+			best_interf = util.getAPsInterference(this.env.getAPs());
 
 			for (int x = 0; x < APs.size(); x++) {
 				for (int y = 0; y < APs.size(); y++) {
@@ -216,7 +215,7 @@ public class ChannelAssigner implements ChannelAssignerInterface {
 
 			interferences.add(global_interf);
 
-		//}
+		}
 
 		final long elapsedTimeMillis = System.currentTimeMillis() - start;
 		this.elapsedTimeSec = elapsedTimeMillis / 1000F;
