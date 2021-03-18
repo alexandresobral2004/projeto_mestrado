@@ -157,6 +157,8 @@ public class Util{
         return this.w[channel_z][channel_m];
       }
 
+      
+      //Max = 35 e Min  =-85
       public float getAntennaPowerNormalization(float value_dBm) {
         return 1 - ((this.max_dBm - value_dBm) / (this.max_dBm - this.min_dBm));
       }
